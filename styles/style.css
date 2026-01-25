@@ -382,7 +382,6 @@ main .container {
     /* меню делаем горизонтальным */
     .sidebar__inner-menu {
         flex-direction: row;
-        gap: 10px;
         width: auto;
         font-size: 15px;
     }
@@ -447,12 +446,13 @@ main .container {
     .sidebar__inner-menu {
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
         width: 100%;
         font-size: 15px;
     }
 
     .sidebar__menu-item {
-        padding: 8px 15px;
+        padding: 8px 10px;
         border-radius: 6px;
     }
 
