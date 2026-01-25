@@ -367,6 +367,7 @@ main .container {
     .main__sidebar-photo {
         width: 60px;
         margin: 0;
+        margin-right: 10px;
     }
 
     /* меню делаем горизонтальным */
@@ -397,3 +398,4 @@ main .container {
         padding: 20px;
     }
 }
+
