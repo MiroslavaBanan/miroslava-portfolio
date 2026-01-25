@@ -399,3 +399,67 @@ main .container {
     }
 }
 
+/* ================== MOBILE VERSION ================== */
+@media (max-width: 436px) {
+
+    .container{
+        padding: 0;
+    }
+
+    /* скрываем стандартную шапку */
+    .header {
+        display: none;
+    }
+
+    /* перестраиваем сетку: одна колонка */
+    .main__columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* делаем sidebar верхним блоком */
+    .main__sidebar {
+        width: 100%;
+        position: static;
+        /* убираем sticky */
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 2px solid #E6E5E0;
+        background-color: #F5F4F2;
+    }
+
+    /* фото уменьшаем */
+    .main__sidebar-photo {
+        display: none;
+    }
+
+    /* меню делаем горизонтальным */
+    .sidebar__inner-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .sidebar__menu-item {
+        padding: 5px 10px;
+        border-radius: 6px;
+    }
+
+    /* контент без левой границы */
+    .content {
+        border-left: none;
+        padding: 20px;
+    }
+
+    /* заголовки уменьшаем */
+    .content__introduction-title {
+        font-size: 32px;
+    }
+
+    .footer__inner{
+        padding: 20px;
+    }
+}
+
+
