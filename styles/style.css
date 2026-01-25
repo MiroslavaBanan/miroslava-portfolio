@@ -91,6 +91,16 @@ main .container {
     border-radius: 8px;
 }
 
+.sidebar__menu-item {
+    background-color: #DEDEDE;
+    /* серый фон */
+}
+
+.sidebar__menu-item--active {
+    background-color: #FDFBFB;
+    /* светлый фон */
+}
+
 /* ======================================================================= */
 
 .content {
@@ -461,5 +471,6 @@ main .container {
         padding: 20px;
     }
 }
+
 
 
