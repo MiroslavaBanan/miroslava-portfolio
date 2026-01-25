@@ -334,6 +334,10 @@ main .container {
 /* ================== MOBILE VERSION ================== */
 @media (max-width: 768px) {
 
+    .container{
+        padding: 0;
+    }
+
     /* скрываем стандартную шапку */
     .header {
         display: none;
@@ -347,6 +351,7 @@ main .container {
 
     /* делаем sidebar верхним блоком */
     .main__sidebar {
+        width: 100%;
         position: static;
         /* убираем sticky */
         flex-direction: row;
@@ -386,5 +391,9 @@ main .container {
     /* заголовки уменьшаем */
     .content__introduction-title {
         font-size: 32px;
+    }
+
+    .footer__inner{
+        padding: 20px;
     }
 }
