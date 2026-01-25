@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const html = await response.text();
             contentDynamic.innerHTML = html;
 
-            // Запускаем табы в любой секции, где они есть
             initProjectTabs();
 
         } catch (error) {
@@ -22,11 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const section = link.dataset.section;
             loadSection(section);
+
+            document.querySelectorAll('.sidebar__menu-item').forEach(item => {
+                item.classList.remove('sidebar__menu-item--active');
+            });
+
+            link.classList.add('sidebar__menu-item--active');
         });
     });
 
-    // Загружаем About по умолчанию
     loadSection('about');
+
+    const defaultLink = document.querySelector('[data-section="about"]');
+    if (defaultLink) {
+        defaultLink.classList.add('sidebar__menu-item--active');
+    }
 });
 
 
@@ -41,10 +50,8 @@ function initProjectTabs() {
 
         if (!output || allContents.length === 0) return;
 
-        // Показываем первый таб по умолчанию
         output.innerHTML = allContents[0].innerHTML;
 
-        // Сбрасываем активность и ставим активным первый таб
         tabs.forEach(t => t.classList.remove('tab--active'));
         tabs[0].classList.add('tab--active');
 
@@ -58,10 +65,8 @@ function initProjectTabs() {
                     output.innerHTML = content.innerHTML;
                 }
 
-                // Убираем активный класс у всех табов
                 tabs.forEach(t => t.classList.remove('tab--active'));
 
-                // Добавляем активный класс на выбранный
                 btn.classList.add('tab--active');
             });
         });
